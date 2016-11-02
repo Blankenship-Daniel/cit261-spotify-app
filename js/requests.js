@@ -11,9 +11,7 @@ function ajax_request(url, request_type, callback) {
     xmlhttp.onreadystatechange = function(){
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
             callback(xmlhttp.responseText);
-        } else {
-            console.error(xmlhttp.statusText);
-        }
+        } 
     }
     xmlhttp.open(request_type, url, true);
     xmlhttp.send();
