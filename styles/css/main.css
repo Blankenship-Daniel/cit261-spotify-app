@@ -1,0 +1,47 @@
+/******************************************************************************
+ * Scalable and Modular Architecture for CSS
+ *
+ * This is a demo project utilizing the smacss ideology. You can find out more
+ *  about smacss by visiting: https://smacss.com/
+ *
+ * There are five types of categories:
+ *  1. Base
+ *  2. Layout
+ *  3. Module
+ *  4. State
+ *  5. Theme
+ *****************************************************************************/
+/******************************************************************************
+ * Globals
+ *****************************************************************************/
+/******************************************************************************
+ * Base
+ *
+ * Base rules are the defaults. They are almost exclusively single element
+ *  selectors but it could include attribute selectors, pseudo-class selectors,
+ *  child selectors. Essentially, a base style says that wherever this element
+ *  is on the page, it should look like this.
+ *
+ * Examples of Base Styles:
+ *  html, body, form { margin: 0; padding: 0; }
+ *  input[type=text] { border: 1px solid #999; }
+ *  a { color: #039; }
+ *  a:hover { color: #03C; }
+ *****************************************************************************/
+* {
+  box-sizing: border-box; }
+
+/******************************************************************************
+ * Layout
+ *
+ * Layout rules divide the page into sections. Layouts hold one or more
+ *  modules together.
+ *
+ * These rules are prefixed with lyt- for clarity.
+ *****************************************************************************/
+/******************************************************************************
+ * Module
+ *
+ * Modules are the reusable, modular parts of our design. They are the
+ *  callouts, the sidebar sections, the products lists and so on.
+ *****************************************************************************/
