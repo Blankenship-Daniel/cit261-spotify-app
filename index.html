@@ -13,9 +13,15 @@
     <title>Spotify App</title>
 </head>
 <body>
+    <nav>
+        <img id="logo" src="images/spotify_logo.png" alt="Spotify Logo">
+        <img id="hamburger" src="images/hamburger_menu.png" alt="Menu">
+    </nav>
     <div class="content">
-        <h1>Spotify App</h1>
-        <p>Michael Cavey's Branch</p>
+        <h1>Search Albums</h1>
+        <input onkeyup="get_albums(this.value)" type="text">
+
+        <div id="search_results"></div>
     </div>
     <!-- Place javascripts here -->
     <script src="js/requests.js"></script>
