@@ -32,6 +32,7 @@
   box-sizing: border-box; }
 
 body {
+  margin: 0;
   font-family: "Open Sans", sans-serif; }
 
 h1,
@@ -40,6 +41,29 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: "Lato", sans-serif; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+
+input {
+  height: 40px;
+  width: 100%;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  border: 1px solid #e0e0e0;
+  -webkit-transition: border 0.2s ease-in;
+  transition: border 0.2s ease-in;
+  padding: 1em;
+  font-size: 1em; }
+  input:focus {
+    border-color: #bdbdbd;
+    outline: none; }
+
+.title {
   font-family: "Lato", sans-serif; }
 
 /******************************************************************************
@@ -56,3 +80,42 @@ h6 {
  * Modules are the reusable, modular parts of our design. They are the
  *  callouts, the sidebar sections, the products lists and so on.
  *****************************************************************************/
+nav {
+  background: #52e875;
+  height: 50px; }
+  nav img#logo {
+    margin: 10px;
+    width: 30px;
+    float: left; }
+  nav img#hamburger {
+    width: 50px;
+    float: right; }
+    nav img#hamburger:hover {
+      cursor: pointer; }
+
+.content {
+  padding: 1em; }
+
+.result {
+  font-size: .8em;
+  clear: both;
+  height: 110px;
+  margin: 10px 0;
+  padding: 10px;
+  background: #8b4eff;
+  -webkit-box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75); }
+
+.result_image {
+  width: 32%;
+  float: left; }
+  .result_image img {
+    height: 90px; }
+
+.result_desc {
+  width: 68%;
+  float: right; }
+
+#search_results {
+  padding: 5px; }
