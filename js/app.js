@@ -16,14 +16,25 @@ function get_albums(input) {
         var search_results = document.getElementById('search_results');
         search_results.innerHTML = '';
 
+        console.log(obj);
+
         for (var i = 0; i < results.length; i++) {
             var album = results[i].name;
             var artist = results[i].artists[0].name;
             var external_link = results[i].external_urls.spotify;
+            var image = results[i].images[0].url;
 
             var div = document.createElement('div');
             div.classList.add('result');
-            div.innerHTML = '<a href="' + external_link + '">"' + album + '" By ' + artist + '</a>';
+            div.innerHTML = '<a href="' + external_link + '">' +
+                                '<div class="result_image">' +
+                                    '<img src="' + image + '">' +
+                                '</div>' +
+                                '<div class="result_desc">' +
+                                    '<div>Album: ' + album + '</div>' +
+                                    '<div>Artist: ' + artist + '</div>' +
+                                '</div>' +
+                            '</a>';
             search_results.appendChild(div);
         }
     });

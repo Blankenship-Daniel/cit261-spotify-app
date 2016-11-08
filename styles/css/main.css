@@ -97,12 +97,25 @@ nav {
   padding: 1em; }
 
 .result {
+  font-size: .8em;
+  clear: both;
+  height: 110px;
   margin: 10px 0;
   padding: 10px;
   background: #8b4eff;
   -webkit-box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75);
   box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75); }
+
+.result_image {
+  width: 32%;
+  float: left; }
+  .result_image img {
+    height: 90px; }
+
+.result_desc {
+  width: 68%;
+  float: right; }
 
 #search_results {
   padding: 5px; }
