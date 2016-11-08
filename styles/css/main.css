@@ -43,6 +43,10 @@ h5,
 h6 {
   font-family: "Lato", sans-serif; }
 
+a {
+  color: #fff;
+  text-decoration: none; }
+
 input {
   height: 40px;
   width: 100%;
@@ -91,3 +95,14 @@ nav {
 
 .content {
   padding: 1em; }
+
+.result {
+  margin: 10px 0;
+  padding: 10px;
+  background: #8b4eff;
+  -webkit-box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 1px 4px -2px rgba(0, 0, 0, 0.75); }
+
+#search_results {
+  padding: 5px; }

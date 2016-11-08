@@ -21,9 +21,10 @@ function get_albums(input) {
             var artist = results[i].artists[0].name;
             var external_link = results[i].external_urls.spotify;
 
-            var p_elem = document.createElement('p');
-            p_elem.innerHTML = '<a href="' + external_link + '">"' + album + '" By ' + artist + '</a>';
-            search_results.appendChild(p_elem);
+            var div = document.createElement('div');
+            div.classList.add('result');
+            div.innerHTML = '<a href="' + external_link + '">"' + album + '" By ' + artist + '</a>';
+            search_results.appendChild(div);
         }
     });
 }
