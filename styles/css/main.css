@@ -43,7 +43,7 @@ h5,
 h6 {
   font-family: "Lato", sans-serif; }
 
-a {
+#search_results a {
   color: #fff;
   text-decoration: none; }
 
@@ -96,6 +96,9 @@ nav {
 .content {
   padding: 1em; }
 
+.page {
+  display: none; }
+
 .result {
   font-size: .8em;
   clear: both;
@@ -119,3 +122,6 @@ nav {
 
 #search_results {
   padding: 5px; }
+
+.active {
+  display: block; }
