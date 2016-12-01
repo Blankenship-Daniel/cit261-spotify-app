@@ -61,7 +61,7 @@ function get_tracks(input) {
             var track = results[i].name;
             var popularity = results[i].popularity;
             var external_link = results[i].external_urls.spotify;
-            var image = results[i].images[0].url;
+            var image = results[i].album.images[0].url;
 
             var div = document.createElement('div');
             div.classList.add('result');
