@@ -8,6 +8,7 @@
     <!-- Place stylesheets here -->
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
     <link rel="stylesheet" href="styles/css/main.css">
 
     <title>Spotify App</title>
@@ -18,13 +19,15 @@
             <img id="logo" src="images/spotify_logo.png" alt="Spotify Logo">
         </a>
         <div id="dropdown_menu">
-            <img id="hamburger" src="images/hamburger_menu.png" alt="Menu" ontouchstart="toggle_menu('menu')">
+            <img id="hamburger" src="images/hamburger_menu.png" alt="Menu" onclick="toggle_menu('menu')">
             <ul id="menu" class="fadeable reset">
                 <li><a href="#albums">Albums</a></li>
                 <hr>
                 <li><a href="#artists">Artists</a></li>
                 <hr>
                 <li><a href="#tracks">Songs</a></li>
+                <hr>
+                <li><a href="#favorites">Favorites</a></li>
             </ul>
         </div>
     </nav>
@@ -35,6 +38,7 @@
                 <li><a href="#albums">Albums</a></li>
                 <li><a href="#artists">Artists</a></li>
                 <li><a href="#tracks">Songs</a></li>
+                <li><a href="#favorites">Favorites</a></li>
             </ul>
         </div>
         <div id="albums" class="page reset">
@@ -55,10 +59,22 @@
 
             <div id="songs_results"></div>
         </div>
+        <div id="favorites" class="page reset">
+            <h1>Favorites</h1>
+
+            <h4>Songs</h4>
+            <div id="favorite_track_container"></div>
+
+            <h4>Artists</h4>
+            <div id="favorite_artist_container"></div>
+
+            <h4>Albums</h4>
+            <div id="favorite_album_container"></div>
+        </div>
     </div>
     <!-- Place javascripts here -->
-    <script src="js/requests.js"></script>
-    <script src="js/app.js"></script>
     <script src="js/spa.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/requests.js"></script>
 </body>
 </html>

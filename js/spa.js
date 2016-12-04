@@ -12,6 +12,11 @@ function load_page(path) {
         document.getElementById('home').classList.add('active');
     } else {
         var id = path.substr(1, path.length - 1);
+
+        if (id === 'favorites') {
+            print_favorites();
+        }
+
         document.getElementById(id).classList.add('active');
     }
 }

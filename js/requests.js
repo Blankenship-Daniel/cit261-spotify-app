@@ -49,8 +49,13 @@ function get_albums(input) {
                                     '<div>Artist: ' + artist + '</div>' +
                                 '</div>' +
                             '</a>' +
-                            '<div><a ontouchstart="save_to_local_storage({ album: \'' + album + '\', artist: \'' + artist + '\', external_link: \'' + external_link + '\', image: \'' + image + '\' })">Favorite</a></div>';
-
+                            '<div class="favorited_wrapper" onclick="save_to_local_storage(this, \'album\', { ' +
+                                  'album: \'' + encodeURIComponent(album) + '\', ' +
+                                  'artist: \'' + encodeURIComponent(artist) + '\', ' +
+                                  'external_link: \'' + encodeURIComponent(external_link) + '\', ' +
+                                  'image: \'' + encodeURIComponent(image) + '\' })">' +
+                                  '<i class="fa fa-floppy-o"></i>' +
+                             '</div>';
             search_results.appendChild(div);
         }
     });
@@ -91,7 +96,13 @@ function get_artists(input) {
                                 '<div class="result_desc">' +
                                     '<div>' + artist + '</div>' +
                                 '</div>' +
-                            '</a>';
+                            '</a>' +
+                            '<div class="favorited_wrapper" onclick="save_to_local_storage(this, \'artist\', { ' +
+                                  'artist: \'' + encodeURIComponent(artist) + '\', ' +
+                                  'external_link: \'' + encodeURIComponent(external_link) + '\', ' +
+                                  'image: \'' + encodeURIComponent(image) + '\' })">' +
+                                  '<i class="fa fa-floppy-o"></i>' +
+                             '</div>';
             search_results.appendChild(div);
         }
     });
@@ -126,7 +137,13 @@ function get_songs(input) {
                                 '<div class="result_desc">' +
                                     '<div>' + song + '</div>' +
                                 '</div>' +
-                            '</a>';
+                            '</a>' +
+                            '<div class="favorited_wrapper" onclick="save_to_local_storage(this, \'track\', { ' +
+                                  'song: \'' + encodeURIComponent(song) + '\', ' +
+                                  'external_link: \'' + encodeURIComponent(external_link) + '\', ' +
+                                  'image: \'' + encodeURIComponent(image) + '\' })">' +
+                                  '<i class="fa fa-floppy-o"></i>' +
+                             '</div>';
             search_results.appendChild(div);
         }
     });
